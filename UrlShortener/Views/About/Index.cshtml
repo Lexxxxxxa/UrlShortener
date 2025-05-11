@@ -1,0 +1,19 @@
+﻿@model UrlShortener.Models.AboutInfo
+
+<div class="container mt-4">
+    <h2>About</h2>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <form method="post" action="/About/Edit">
+            <div class="mb-3">
+                <textarea name="description" class="form-control" rows="6">@Model.Description</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    }
+    else
+    {
+        <p>@Html.Raw(Model.Description.Replace("\n", "<br/>"))</p>
+    }
+</div>

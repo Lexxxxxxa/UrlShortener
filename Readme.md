@@ -29,11 +29,11 @@ UrlShortener is a web service for creating short links with user registration an
    ```
 
 2. Set the connection string in `appsettings.json`:
-
+   
    ```
-  "ConnectionStrings": {
-    "DefaultConnection": "Data Source=Your Data Source;Initial Catalog=UrlShortenerDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-  },
+     "ConnectionStrings": {
+		"DefaultConnection": "Data Source=Your Data Source;Initial Catalog=UrlShortenerDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+		},
    ```
 
 3. Apply migrations to create the database:
